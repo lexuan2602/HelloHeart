@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-export default function RadioDetail() {
+export default function Predict() {
   return (
     <View>
-      <Text>RadioDetail</Text>
+      <Text>Predict</Text>
     </View>
   );
 }

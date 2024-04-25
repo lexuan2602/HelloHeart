@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import GlobalApi from "../../Services/GlobalApi";
 import { FlatList } from "react-native";
 import { Image } from "react-native";
-// import Colors from "../Shared/Colors";
+import Colors from "../../../assets/Shared/Colors";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
@@ -44,7 +44,7 @@ export default function HeartRadio() {
       id: 2,
       name: "Yoga for heart 2",
       image:
-        "https://res.cloudinary.com/dbvvth5qb/image/upload/v1712684863/14324292187471101089_8e0dccadb9.jpg",
+        "https://res.cloudinary.com/dbvvth5qb/image/upload/v1712715260/205184201739964861_f54af7b271.jpg",
       Topic: {
         id: 1,
         name: "Yoga 1",
@@ -53,10 +53,11 @@ export default function HeartRadio() {
     },
   ];
   const onPressCourse = (course) => {
-    navigation.navigate("radio-detail", {
-      courseData: course,
-      courseType: "text",
-    });
+    // navigation.navigate("Radio-detail", {
+    //   courseData: course,
+    //   courseType: "text",
+    // });
+    navigation.navigate("Radio-detail");
   };
   return (
     <View style={{ marginTop: 10 }}>
@@ -82,14 +83,15 @@ export default function HeartRadio() {
               backgroundColor: Colors.white,
               marginRight: 10,
               borderRadius: 10,
+              marginTop: 10,
             }}
             onPress={() => onPressCourse(item)}
           >
             <Image
               source={{ uri: item.image }}
               style={{
-                width: 180,
-                height: 100,
+                width: 200,
+                height: 120,
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10,
                 resizeMode: "cover",

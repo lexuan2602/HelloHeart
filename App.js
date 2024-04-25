@@ -35,10 +35,10 @@ export default function App() {
     //     </SignedOut>
     //   </SafeAreaView>
     // </ClerkProvider>
-    <View>
+    <View style={styles.container}>
       <NavigationContainer>
         {/* <Home /> */}
-        <HomeStackNavigation />
+        <TabNavigation />
       </NavigationContainer>
     </View>
   );
